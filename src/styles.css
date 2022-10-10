@@ -38,3 +38,19 @@ body {
   width: 300px;
   height: 100px;
 }
+
+.red {
+  color: red;
+}
+
+table {
+  border: 1px solid lightgray;
+}
+
+table th:first-of-type {
+  border-right: 1px solid lightgray;
+}
+
+th, td {
+  padding: 4px 8px;
+}
