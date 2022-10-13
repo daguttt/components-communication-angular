@@ -8,8 +8,6 @@ import { HelloComponent } from "./hello.component";
 import { ParentComponent } from "./components/parent/parent.component";
 import { ChildComponent } from "./components/child/child.component";
 import { GrandChildComponent } from "./components/grand-child/grand-child.component";
-import { ContentComponent } from "./components/content/content.component";
-import { TableComponent } from "./components/table/table.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -19,8 +17,6 @@ import { TableComponent } from "./components/table/table.component";
     ParentComponent,
     ChildComponent,
     GrandChildComponent,
-    TableComponent,
-    ContentComponent,
   ],
   bootstrap: [AppComponent],
 })
