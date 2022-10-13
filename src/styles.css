@@ -27,6 +27,11 @@ h1 {
   max-width: 700px;
 }
 
+main.container {
+  display: grid;
+  place-items: center;
+}
+
 .box {
   display: flex;
   flex-direction: column;
