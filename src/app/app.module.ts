@@ -1,13 +1,15 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
 
-import { HelloComponent } from './hello.component';
-import { ParentComponent } from './components/parent/parent.component';
-import { ChildComponent } from './components/child/child.component';
-import { GrandChildComponent } from './components/grand-child/grand-child.component';
+import { HelloComponent } from "./hello.component";
+import { ParentComponent } from "./components/parent/parent.component";
+import { ChildComponent } from "./components/child/child.component";
+import { GrandChildComponent } from "./components/grand-child/grand-child.component";
+import { ContentComponent } from "./components/content/content.component";
+import { TableComponent } from "./components/table/table.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -17,6 +19,8 @@ import { GrandChildComponent } from './components/grand-child/grand-child.compon
     ParentComponent,
     ChildComponent,
     GrandChildComponent,
+    TableComponent,
+    ContentComponent,
   ],
   bootstrap: [AppComponent],
 })

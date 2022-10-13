@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { Relatives } from "src/app/interfaces/relatives.interface";
+import { generateRandomNumber } from "src/app/shared/generateRandomNumber";
 
 @Component({
-  selector: 'app-child',
-  templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  selector: "app-child",
+  templateUrl: "./child.component.html",
+  styleUrls: ["./child.component.css"],
 })
 export class ChildComponent implements OnInit {
+  @Input() numberFromParent: number | null;
+  @Input() numberToGrandChild: number | null;
 
-  constructor() { }
+  @Output() onNumberToParent: EventEmitter<number> = new EventEmitter();
+  @Output() onGrandChildToParent: EventEmitter<number> = new EventEmitter();
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  sendRandomNumberToParent() {
+    this.onNumberToParent.emit(generateRandomNumber());
   }
 
+  sendGrandChildNumberToParent(num: number) {
+    this.onGrandChildToParent.emit(num);
+  }
 }

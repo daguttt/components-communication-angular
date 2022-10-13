@@ -1,16 +1,22 @@
-<p>parent works!</p>
-<button type="button">
-  Send <b>random number</b> to <b class="red">Child</b>
-</button>
-<button type="button">
-  Send <b>random number</b> to <b class="red">Grand Child</b>
-</button>
-
-
-<div>
-  <p></p>
-</div>
-<div>
-  <p></p>
-</div>
-<app-child class="box child"></app-child>
+<h2>Parent</h2>
+<section>
+  <div>
+    <h3>Random number from Child: {{ numberFromChild | json }}</h3>
+    <button (click)="sendRandomNumberToChild()">
+      Send random number to Child
+    </button>
+  </div>
+  <div>
+    <h3>Grand Child random number: {{ numberFromGrandChild | json }}</h3>
+    <button (click)="sendRandomNumberToGrandChild()">
+      Send random number to Grand Child
+    </button>
+  </div>
+</section>
+<app-child
+  class="box"
+  (onNumberToParent)="onNumberFromChild($event)"
+  (onGrandChildToParent)="onNumberFromGrandChild($event)"
+  [numberFromParent]="numberToChild"
+  [numberToGrandChild]="numberToGrandChild"
+></app-child>

@@ -1,14 +1,8 @@
 <table>
   <thead>
-    <tr>
-      <th>Numbers from Child</th>
-      <th>Numbers from Grand Child</th>
-    </tr>
+    <ng-content select="[header]"></ng-content>
   </thead>
   <tbody>
-    <tr>
-      <td><pre>Hello</pre></td>
-      <td><pre>Hello</pre></td>
-    </tr>
+    <ng-content select="[content]"></ng-content>
   </tbody>
 </table>
