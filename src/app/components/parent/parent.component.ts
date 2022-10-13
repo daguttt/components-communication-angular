@@ -17,8 +17,6 @@ export class ParentComponent implements OnInit {
 
   ngOnInit() {}
 
-  onChildMsg(msg: string): void {}
-
   sendRandomNumberToChild(): number[] | void {
     if (!this.numbersToChild.length)
       return (this.numbersToChild = [generateRandomNumber()]);
