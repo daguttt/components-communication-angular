@@ -8,6 +8,7 @@ import { HelloComponent } from "./hello.component";
 import { ParentComponent } from "./components/parent/parent.component";
 import { ChildComponent } from "./components/child/child.component";
 import { GrandChildComponent } from "./components/grand-child/grand-child.component";
+import { ParseRandomNumberList } from "./pipes/parse-random-number-list.pipe";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -17,6 +18,8 @@ import { GrandChildComponent } from "./components/grand-child/grand-child.compon
     ParentComponent,
     ChildComponent,
     GrandChildComponent,
+    //Pipes
+    ParseRandomNumberList,
   ],
   bootstrap: [AppComponent],
 })

@@ -7,11 +7,11 @@ import { generateRandomNumber } from "src/app/shared/generateRandomNumber";
   styleUrls: ["./parent.component.css"],
 })
 export class ParentComponent implements OnInit {
-  numberToChild: number | null = null;
-  numberToGrandChild: number | null = null;
+  numbersToChild: number[] = [];
+  numbersToGrandChild: number[] = [];
 
-  numberFromChild: number | null = null;
-  numberFromGrandChild: number | null = null;
+  numbersFromChild: number[] = [];
+  numbersFromGrandChild: number[] = [];
 
   constructor() {}
 
@@ -19,19 +19,33 @@ export class ParentComponent implements OnInit {
 
   onChildMsg(msg: string): void {}
 
-  sendRandomNumberToChild() {
-    this.numberToChild = generateRandomNumber();
+  sendRandomNumberToChild(): number[] | void {
+    if (!this.numbersToChild.length)
+      return (this.numbersToChild = [generateRandomNumber()]);
+
+    this.numbersToChild = [...this.numbersToChild, generateRandomNumber()];
   }
 
-  sendRandomNumberToGrandChild() {
-    this.numberToGrandChild = generateRandomNumber();
+  sendRandomNumberToGrandChild(): number[] | void {
+    if (!this.numbersToGrandChild.length)
+      return (this.numbersToGrandChild = [generateRandomNumber()]);
+
+    this.numbersToGrandChild = [
+      ...this.numbersToGrandChild,
+      generateRandomNumber(),
+    ];
   }
 
-  onNumberFromChild(num: number) {
-    this.numberFromChild = num;
+  onNumberFromChild(num: number): number[] | void {
+    if (!this.numbersFromChild.length) return (this.numbersFromChild = [num]);
+
+    this.numbersFromChild = [...this.numbersFromChild, num];
   }
 
-  onNumberFromGrandChild(num: number) {
-    this.numberFromGrandChild = num;
+  onNumberFromGrandChild(num: number): number[] | void {
+    if (!this.numbersFromGrandChild.length)
+      return (this.numbersFromGrandChild = [num]);
+
+    this.numbersFromGrandChild = [...this.numbersFromGrandChild, num];
   }
 }

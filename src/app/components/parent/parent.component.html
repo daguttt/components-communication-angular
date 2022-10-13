@@ -2,16 +2,17 @@
 <section>
   <div>
     <h3>
-      {{ "Random number from Child" | titlecase }}: {{ numberFromChild | json }}
+      {{ "Random number list from" | titlecase }} <b>Child</b>:
+      {{ numbersFromChild | parseRandomNumberList }}
     </h3>
     <button (click)="sendRandomNumberToChild()">
-      Send random number to Child
+      {{ "Send random number to Child" | titlecase }}
     </button>
   </div>
   <div>
     <h3>
-      {{ "Grand Child random number" | titlecase }}:
-      {{ numberFromGrandChild | json }}
+      {{ "Random number list from" | titlecase }} <b>Grand Child</b>:
+      {{ numbersFromGrandChild | parseRandomNumberList }}
     </h3>
     <button (click)="sendRandomNumberToGrandChild()">
       {{ "Send random number to Grand Child" | titlecase }}
@@ -22,6 +23,6 @@
   class="box"
   (onNumberToParent)="onNumberFromChild($event)"
   (onGrandChildToParent)="onNumberFromGrandChild($event)"
-  [numberFromParent]="numberToChild"
-  [numberToGrandChild]="numberToGrandChild"
+  [numbersFromParent]="numbersToChild"
+  [numbersToGrandChild]="numbersToGrandChild"
 ></app-child>

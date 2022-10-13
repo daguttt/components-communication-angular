@@ -2,8 +2,8 @@
 <section>
   <div>
     <h3>
-      {{ "Random number from Parent" | titlecase }}:
-      {{ numberFromParent | json }}
+      {{ "Random number from" | titlecase }} <b>Parent</b>:
+      {{ numbersFromParent | parseRandomNumberList }}
     </h3>
     <button (click)="sendRandomNumberToParent()">
       {{ "Send random number to Parent" | titlecase }}
