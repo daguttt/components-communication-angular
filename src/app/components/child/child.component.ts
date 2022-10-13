@@ -8,8 +8,8 @@ import { generateRandomNumber } from "src/app/shared/generateRandomNumber";
   styleUrls: ["./child.component.css"],
 })
 export class ChildComponent implements OnInit {
-  @Input() numbersFromParent: number[];
-  @Input() numbersToGrandChild: number[];
+  @Input() numbersFromParent!: number[];
+  @Input() numbersToGrandChild!: number[];
 
   @Output() onNumberToParent: EventEmitter<number> = new EventEmitter();
   @Output() onGrandChildToParent: EventEmitter<number> = new EventEmitter();
