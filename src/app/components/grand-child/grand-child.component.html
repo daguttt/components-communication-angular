@@ -1,9 +1,12 @@
 <h4>Grand Child</h4>
 <section>
   <div>
-    <h3>Random number from Parent: {{ numberFromParent | json }}</h3>
+    <h3>
+      {{ "Random number from Parent" | titlecase }}:
+      {{ numberFromParent | json }}
+    </h3>
     <button (click)="sendRandomNumberToParent()">
-      Send random number to Parent
+      {{ "Send random number to Parent" | titlecase }}
     </button>
   </div>
 </section>

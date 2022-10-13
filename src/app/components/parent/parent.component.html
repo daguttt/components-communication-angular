@@ -1,15 +1,20 @@
 <h2>Parent</h2>
 <section>
   <div>
-    <h3>Random number from Child: {{ numberFromChild | json }}</h3>
+    <h3>
+      {{ "Random number from Child" | titlecase }}: {{ numberFromChild | json }}
+    </h3>
     <button (click)="sendRandomNumberToChild()">
       Send random number to Child
     </button>
   </div>
   <div>
-    <h3>Grand Child random number: {{ numberFromGrandChild | json }}</h3>
+    <h3>
+      {{ "Grand Child random number" | titlecase }}:
+      {{ numberFromGrandChild | json }}
+    </h3>
     <button (click)="sendRandomNumberToGrandChild()">
-      Send random number to Grand Child
+      {{ "Send random number to Grand Child" | titlecase }}
     </button>
   </div>
 </section>
