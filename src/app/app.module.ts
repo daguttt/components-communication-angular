@@ -1,14 +1,15 @@
-import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppComponent } from "./app.component";
+import { AppComponent } from './app.component';
 
-import { HelloComponent } from "./hello.component";
-import { ParentComponent } from "./components/parent/parent.component";
-import { ChildComponent } from "./components/child/child.component";
-import { GrandChildComponent } from "./components/grand-child/grand-child.component";
-import { ParseRandomNumberList } from "./pipes/parse-random-number-list.pipe";
+import { HelloComponent } from './hello.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
+import { GrandChildComponent } from './components/grand-child/grand-child.component';
+import { ParseRandomNumberList } from './pipes/parse-random-number-list.pipe';
+import { IsLastNumberPrime } from './pipes/is-last-number-prime.pipe';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -20,6 +21,7 @@ import { ParseRandomNumberList } from "./pipes/parse-random-number-list.pipe";
     GrandChildComponent,
     //Pipes
     ParseRandomNumberList,
+    IsLastNumberPrime,
   ],
   bootstrap: [AppComponent],
 })

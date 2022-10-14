@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { generateRandomNumber } from "src/app/shared/generateRandomNumber";
+import { Component, OnInit } from '@angular/core';
+import { generateRandomNumber } from 'src/app/shared/generate-random-number';
 
 @Component({
-  selector: "app-parent",
-  templateUrl: "./parent.component.html",
-  styleUrls: ["./parent.component.css"],
+  selector: 'app-parent',
+  templateUrl: './parent.component.html',
+  styleUrls: ['./parent.component.css'],
 })
 export class ParentComponent implements OnInit {
   numbersToChild: number[] = [];
@@ -44,6 +44,6 @@ export class ParentComponent implements OnInit {
     if (!this.numbersFromGrandChild.length)
       return (this.numbersFromGrandChild = [num]);
 
-    this.numbersFromGrandChild = [...this.numbersFromGrandChild, num];
+    this.numbersFromGrandChild.push(num);
   }
 }

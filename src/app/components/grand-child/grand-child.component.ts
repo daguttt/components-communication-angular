@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Relatives } from 'src/app/interfaces/relatives.interface';
-import { generateRandomNumber } from 'src/app/shared/generateRandomNumber';
+import { generateRandomNumber } from 'src/app/shared/generate-random-number';
 
 @Component({
   selector: 'app-grand-child',

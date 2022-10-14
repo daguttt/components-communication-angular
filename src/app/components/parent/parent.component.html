@@ -11,8 +11,8 @@
   </div>
   <div>
     <h3>
-      {{ "Random number list from" | titlecase }} <b>Grand Child</b>:
-      {{ numbersFromGrandChild | parseRandomNumberList }}
+      {{ "Is last number sent from" | titlecase }} <b>Grand Child</b> Prime? :
+      {{ numbersFromGrandChild | isLastNumberPrime }}
     </h3>
     <button (click)="sendRandomNumberToGrandChild()">
       {{ "Send random number to Grand Child" | titlecase }}
